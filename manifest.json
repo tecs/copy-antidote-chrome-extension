@@ -1,0 +1,13 @@
+{
+  "manifest_version": 2,
+  "name": "CopyAntidote",
+  "description": "Re-enables copying from websites that implement the CopyPoison copy-protection.",
+  "version": "1.1",
+  "permissions": ["http://*/*", "https://*/*", "tabs"],
+  "content_scripts": [{
+    "run_at": "document_start",
+    "js": [ "ca.js" ],
+    "matches": [ "<all_urls>" ],
+    "all_frames": true
+   }]
+}
